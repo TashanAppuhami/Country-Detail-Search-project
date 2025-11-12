@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="dots" x="20" y="20" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+
+  <!-- Base gradient overlay -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+
+  <!-- Decorative world map shapes with better continents -->
+  <g opacity="0.12" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5">
+    <!-- North America outline -->
+    <path d="M 80 180 L 120 150 L 150 160 L 160 220 L 140 280 L 100 260 Z"/>
+    
+    <!-- South America outline -->
+    <path d="M 130 320 L 160 300 L 170 420 L 140 460 Z"/>
+    
+    <!-- Europe outline -->
+    <path d="M 320 100 L 380 90 L 400 140 L 370 180 L 340 160 Z"/>
+    
+    <!-- Africa outline -->
+    <path d="M 380 200 L 450 190 L 520 240 L 540 400 L 480 450 L 400 420 Z"/>
+    
+    <!-- Middle East -->
+    <path d="M 450 180 L 520 160 L 550 240 Z"/>
+    
+    <!-- Asia outline -->
+    <path d="M 520 80 L 680 60 L 760 100 L 800 150 L 750 240 L 620 220 Z"/>
+    
+    <!-- Southeast Asia -->
+    <path d="M 650 220 L 720 240 L 740 300 L 680 320 Z"/>
+    
+    <!-- Australia outline -->
+    <path d="M 750 420 L 810 410 L 830 480 L 800 520 Z"/>
+  </g>
+
+  <!-- Filled continent shapes with glow -->
+  <g opacity="0.05" fill="rgba(255,255,255,0.4)">
+    <ellipse cx="110" cy="220" rx="35" ry="50"/>
+    <ellipse cx="145" cy="380" rx="20" ry="70"/>
+    <ellipse cx="360" cy="140" rx="35" ry="40"/>
+    <ellipse cx="450" cy="310" rx="60" ry="100"/>
+    <ellipse cx="600" cy="140" rx="90" ry="80"/>
+    <ellipse cx="720" cy="280" rx="50" ry="60"/>
+    <ellipse cx="790" cy="460" rx="30" ry="50"/>
+  </g>
+
+  <!-- Major city markers -->
+  <g fill="rgba(255,255,255,0.25)" filter="url(#softGlow)">
+    <!-- Americas -->
+    <circle cx="95" cy="245" r="2.5"/>
+    <circle cx="135" cy="385" r="2.5"/>
+    
+    <!-- Europe -->
+    <circle cx="360" cy="165" r="2.5"/>
+    
+    <!-- Africa -->
+    <circle cx="420" cy="300" r="2.5"/>
+    <circle cx="500" cy="380" r="2.5"/>
+    
+    <!-- Middle East -->
+    <circle cx="480" cy="210" r="2.5"/>
+    
+    <!-- Asia -->
+    <circle cx="580" cy="130" r="2.5"/>
+    <circle cx="680" cy="160" r="2.5"/>
+    <circle cx="720" cy="210" r="2.5"/>
+    
+    <!-- Southeast Asia -->
+    <circle cx="700" cy="280" r="2.5"/>
+    
+    <!-- Australia -->
+    <circle cx="790" cy="460" r="2.5"/>
+  </g>
+
+  <!-- Connection lines between cities -->
+  <g stroke="rgba(255,255,255,0.08)" stroke-width="0.8" fill="none" stroke-dasharray="3,3">
+    <line x1="95" y1="245" x2="360" y2="165"/>
+    <line x1="360" y1="165" x2="580" y2="130"/>
+    <line x1="580" y1="130" x2="720" y2="210"/>
+    <line x1="720" y1="210" x2="790" y2="460"/>
+    <line x1="135" y1="385" x2="420" y2="300"/>
+    <line x1="420" y1="300" x2="500" y2="380"/>
+    <line x1="500" y1="380" x2="790" cy="460"/>
+  </g>
+
+  <!-- Atmospheric layers/clouds effect -->
+  <g opacity="0.04" fill="rgba(255,255,255,0.5)">
+    <path d="M 0 50 Q 300 30 600 50 T 1200 50 L 1200 0 L 0 0 Z"/>
+    <path d="M 0 700 Q 300 680 600 700 T 1200 700 L 1200 800 L 0 800 Z"/>
+  </g>
+
+  <!-- Subtle grid pattern -->
+  <rect width="1200" height="800" fill="url(#dots)"/>
+
+  <!-- Decorative wave lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M 0 120 Q 200 100 400 120 T 800 120 T 1200 120"/>
+    <path d="M 0 680 Q 200 660 400 680 T 800 680 T 1200 680"/>
+    <path d="M 0 400 Q 300 380 600 400 T 1200 400"/>
+  </g>
+
+  <!-- Spotlight effects -->
+  <circle cx="200" cy="200" r="150" fill="rgba(255,255,255,0.02)"/>
+  <circle cx="950" cy="650" r="180" fill="rgba(255,255,255,0.02)"/>
+  <circle cx="600" cy="400" r="120" fill="rgba(255,255,255,0.01)"/>
+</svg>
